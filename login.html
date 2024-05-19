@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goldpal Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="">
+</head>
+<body>
+    <div class="login-signup" style="height: 420px;">
+        <h2>Login</h2>
+        <form action="" id="login">
+            <div class="user-box">
+                <input type="email" name="" id="login-email" autocomplete="off" required>
+                <label for="login-email">Email</label>
+            </div>
+
+            <div class="user-box">
+                <input type="password" name="" id="password" autocomplete="off" required>
+                <label for="login-password">Password</label>
+                <img src="eye.png" id="eyeicon">
+            </div>
+
+            <div class="forgot-pwd">
+                <h4>Forgot Password?</h4>
+            </div>
+
+            <div class="btn1" style="position: relative; bottom: 10px;">
+                <button id="login-submit">Submit</button>
+                <div class="loader"></div>
+                <h4 style="position: relative; top: 30px;">Create Account ? <span id="nav-to-signup"><a href="register.html">Click Here</a></span></h4>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        let eyeicon = document.getElementById("eyeicon")
+        let password = document.getElementById("password")
+
+        eyeicon.onclick = function(){
+            if(password.type=="password"){
+                password.type="text";
+                eyeicon.src = "eye.png"
+            }
+
+            else{
+                password.type="password"
+                eyeicon.src = "close-eyes.png"
+            }
+        }
+
+
+    </script>
+</body>
+</html>
